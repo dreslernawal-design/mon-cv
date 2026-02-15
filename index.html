@@ -1,11 +1,69 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mon CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Profesional</title>
+    <style>
+        /* Reseteo básico y fondo negro total */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #000000; /* Fondo negro puro */
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Evita barras de desplazamiento */
+        }
+
+        /* Contenedor central para los botones */
+        .container {
+            width: 90%; /* Ocupa casi todo el ancho */
+            max-width: 800px; /* Pero no te pases en pantallas gigantes */
+            display: flex;
+            flex-direction: column;
+            gap: 30px; /* Espacio entre los dos botones */
+        }
+
+        /* Estilo de los botones "súper largos" y con degradado */
+        .btn {
+            display: block;
+            width: 100%; /* Van de izquierda a derecha */
+            padding: 35px 0; /* Botones altos y con presencia */
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 4px; /* Texto espaciado elegante */
+            font-weight: 300;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7); /* Blanco sutil para el texto */
+            
+            /* LA MAGIA DEL DEGRADADO: No hay línea, el botón se define por luz */
+            /* Negro en los bordes, un toque de luz blanca en el centro */
+            background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0.08) 50%, rgba(0,0,0,1) 100%);
+            
+            border: none; /* Sin bordes sólidos */
+            border-radius: 4px; /* Un mínimo redondeo */
+            transition: all 0.5s ease; /* Animación suave */
+        }
+
+        /* Efecto al pasar el mouse */
+        .btn:hover {
+            /* El degradado se vuelve un poco más intenso */
+            background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0.15) 50%, rgba(0,0,0,1) 100%);
+            color: white; /* Texto blanco puro */
+            letter-spacing: 6px; /* El texto se expande un poco */
+        }
+    </style>
 </head>
 <body>
-    <h1>Site en construction</h1>
-    <p>Bientôt mon CV et ma section contact ici.</p>
+
+    <div class="container">
+        <a href="cv.pdf" class="btn" target="_blank">CV</a>
+        <a href="mailto:tu@email.com" class="btn">Contact</a>
+    </div>
+
 </body>
 </html>
